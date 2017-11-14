@@ -2,6 +2,7 @@
 
 - What does the following component do?
 - Are there any problems with it? If so, what are they?
+- Are there any improvements/changes you would make?
 
 ```jsx
 import React from 'react'
