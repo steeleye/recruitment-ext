@@ -1,0 +1,11 @@
+*Brief*
+1) The requirement needs to be developed in Python 3
+2) Please provide github link for review.
+
+
+*Requirement:*
+1) Download the xlsx from https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.xls
+2) Store the xlsx in an amazon s3 bucket
+3) Read the tab titled "MICs List by CC"
+4) Create a list of dict containing all rows (except row 1). The values in row 1 would be the keys for in each dict.
+5) Store the list from step 4) as a .json file in an aws s3 bucket.
