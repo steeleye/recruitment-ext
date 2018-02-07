@@ -4,7 +4,9 @@
 
 Thank you for your interest in the platform developer role at [SteelEye](https://steel-eye.com).
 
-We hope the test will not only test your abilities but also give you a little glimpse into some of the tasks we carry out. You are welcome to use any resources that would be available to you during the course of a normal day: e.g. Google is permitted, as are textbooks, however use of existing code libraries you have developed anywhere else would not be allowed. You may include code taken from the internet including JARs that are freely downloadable and have no restrictions on usage. In other words, they must be licensed for commercial use without restriction. You should clearly identify and attribute sources within your code to their appropriate ownership.
+We hope the test will not only test your abilities but also give you a little glimpse into some of the tasks we carry out. We expect you to read as much code as you would write and hence this assignment is provided as an incomplete project rather than something you'd start from scratch. In fact the code is a partial extract of our real-life code base and this is the kind of challenges you'd be expected to solve everyday.
+
+You are welcome to use any resources that would be available to you during the course of a normal day: e.g. Google is permitted, as are textbooks, however use of existing code libraries you have developed anywhere else would not be allowed. You may include code taken from the internet including JARs that are freely downloadable and have no restrictions on usage. In other words, they must be licensed for commercial use without restriction. You should clearly identify and attribute sources within your code to their appropriate ownership.
 
 One final word of warning - at a startup like SteelEye you will regularly gather your own requirements directly or receive vague details by email. Sometimes it is not possible to get a very detailed specification simply because the user doesn’t know or isn’t available. When this happens you have to use your initiative and work things out for yourself. This test has several ambiguities and vague definitions. It is up to you to make reasonable and valid assumptions. Do not ask your recruitment consultant for help or advice as they know no more than you do.
 
@@ -16,30 +18,15 @@ As part of the regulatory obligations within SteelEye, we constantly work with s
 
 **CONCAT CODE** is a specific concatenation of certain fields within a application user model and is defined in pages 24-27 of the specification. Write a thread safe routine that could be called to generate the CONCAT code for any user object received by your application.
 
-#### Assumptions
+#### Code Organization
 
-* A user object is received as a JSON document with any number of arbitrary field
-* A user object may or may not contain all the necessary fields required to generate a CONCAT code.
-* If the user object contains all the fields necessary for the code, the code should be generated and returned. Else a null code may be returned.
-* Should adhere all constraints posted by the specification.
-* Ensure that your code is thread-safe and can potentially handle a large number of invocations.
-* Please support your code with additional unit-tests to ensure thread safety and other design constraints that you have employed in your solution.
-
-#### Sample data for testing
-
-| First Name | Surname |  DOB  | Nationality - 1 | Nationality - 2 | Nationality-3 | Expected CONCAT |
-| ---------- | ------- | :---: | :-------------: | :-------------: | :-----------: | --------------- |
-| Åke | Öjvind | 07/07/1959 | FI | -- | --| FI19590707AKE##OJVIN |
-| Jan | Van De Merwe | 12/12/1960 | NL | -- | -- | NL19601212JAN##MERWE |
-| Äärnästi | Friðjóna | 16/02/1975 | IS | -- | -- | IS19750216AARNAFRIDJ |
-| Hlégestur | Norðmaðr | 16/03/1978 | SE | -- | -- | SE19780316HLEGENORDM |
-| Mary-Jane | Montana | 25/12/1975 | GB | FR | CA | CA19751225MARYJMONTA |
-| ALŽBĚTA | BLAŽEJ | 03/01/1957 | CZ | -- | --| CZ19570103ALZBEBLAZE |
-| ANDŻELIKA | BOGUSŁAWA | 12/04/1965 | HU | PL | -- | HU19650412ANDZEBOGUS |
-| ŻAKLINA | SZCZĘSNY | 31/10/1969 | FR | ES | -- | ES19691031ZAKLISZCZE |
-| Альберт | Беломестных | 06/05/1972 | GB | -- | -- | GB19720506ALBIEBIELO |
-| Ευριπιδης | Θεμιστοκλης | 11/11/1983 | GR | -- | -- | GR19831111EURIPTHEMI |
-
+* Based on the problem statement above, the project is organized as a maven project with proper unit testing.
+* All the tests are valid and work as expected - so you're advised not to modify the existing tests but more than welcome to add extra ones where you feel necessary.
+* Three methods have been purposely omitted and are commented as //TODO for you to implement and fix the failing tests. 
+   * DataParser#parseDate - since we collect data from multiple sources and formats, dates could come in any format and this method normalises the input.
+   * DeepRetriever#deepCollect - as a generic platform, we don't deal with POJOs and data is always treated as a generic map and hence map operations are at the heart of all our platform code and hence we expect you to understand the requirements from the unit tests and implement an elegant utility.
+   * ConcatIdBuilder#buildConcatCode - the main logic and algorithm we would like you to implement. The explanation for this is provided in the website above.
+* You're expected to fix any other bug that might be found in the main code.
 
 ### How to submit your work
 
@@ -47,4 +34,4 @@ You can submit your solution as a zip file along with all necessary source and t
 
 Please do not share your solution or make it open source. We would like other candidates to think and try for themselves rather than copying your code and replacing variable names.
 
-Many thanks for taking your time to complete the test.
+Many thanks for taking your time to complete the test. Wish you all the best.
