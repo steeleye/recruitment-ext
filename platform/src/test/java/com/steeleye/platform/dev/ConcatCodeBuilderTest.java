@@ -65,10 +65,10 @@ public class ConcatCodeBuilderTest extends ConcatCodeBuilder {
             {of("NL"), "18 Jun 1990", "Jan", "Van De Merwe", "NL19900618JAN##MERWE"},
             {of("IS"), "18 Jun 1990", "Äärnästi", "Friðjóna", "IS19900618AARNAFRIDJ"},
             {of("SE"), "23 December 1975", "Hlégestur", "Norðmaðr", "SE19751223HLEGENORDM"},
-            {of("GB", "FR", "CA"), "23 December 1975", "Mary-Jane", "Montana", "CA19751223MARYJMONTA"},
+            {of("GB", "CA", "FR"), "23 December 1975", "Mary-Jane", "Montana", "CA19751223MARYJMONTA"},
             {of("CZ"), "1957-01-03T03:15:30.987Z", "ALŽBĚTA", "BLAŽEJ", "CZ19570103ALZBEBLAZE"},
             {of("PL", "HU"), "23 December 1975", "ANDŻELIKA", "BOGUSŁAWA", "HU19751223ANDZEBOGUS"},
-            {of("FR", "ES"), "1969/10/31", "ŻAKLINA", "SZCZĘSNY", "ES19691031ZAKLISZCZE"},
+            {of("ES", "FR"), "1969/10/31", "ŻAKLINA", "SZCZĘSNY", "ES19691031ZAKLISZCZE"},
             {of("GB"), "1972-05-06", "Альберт", "Беломестных", "GB19720506ALBIEBIELO"},
             {of("GR"), "1983/11/11", "Ευριπιδης", "Θεμιστοκλης ", "GR19831111EURIPTHEMI"},
         };
@@ -77,8 +77,8 @@ public class ConcatCodeBuilderTest extends ConcatCodeBuilder {
     @Test @Parameters(method = "concatInputs")
     public void buildConcatCodeSuccess(List<String> nationality, String dob, String first, String last, String expected) throws Exception {
         Map<String, Object> user = mapOf("personalDetails", mapOf("nationality", nationality,
-            "firstName", first, "lastName", last, "dob", dob == null ? null : dob.toString()));
-        assertThat(buildConcatId(user), is(expected));
+            "firstName", first, "lastName", last, "dob", dob));
+        assertThat(buildConcatCode(user), is(expected));
     }
 
     @Test

@@ -18,17 +18,17 @@ public abstract class ConcatCodeBuilder {
     private static final String[] TITLES = new String[]{"ATTY ", "COACH ", "DAME ", "DR ", "FR ", "GOV ", "HONORABLE ",
         "MADAME ", "MADAM ", "MAID ", "MASTER ", "MISS ", "MONSIEUR ", "MR ", "MRS ", "MS ", "MX ", "OFC ", "PHD ", "PRES ", "PROF ", "REV ", "SIR "};
 
-    public static String buildConcatId(Map<String, Object> user) {
+    public static String buildConcatCode(Map<String, Object> user) {
         String nationality = getFirst(deepCollect(user, "personalDetails.nationality", String.class), "");
         String dateOfBirth = deepRetrieve(user, "personalDetails.dob");
         String firstName = deepRetrieve(user, "personalDetails.firstName");
         String lastName = deepRetrieve(user, "personalDetails.lastName");
 
         return isNullOrEmpty(firstName) || isNullOrEmpty(lastName) || isNullOrEmpty(dateOfBirth) || isNullOrEmpty(nationality) ? null :
-            buildConcatId(nationality, parseDate(dateOfBirth), firstName, lastName);
+            buildConcatCode(nationality, parseDate(dateOfBirth), firstName, lastName);
     }
 
-    private static String buildConcatId(String nationality, LocalDate dateOfBirth, String firstName, String lastName) {
+    private static String buildConcatCode(String nationality, LocalDate dateOfBirth, String firstName, String lastName) {
         //TODO IMPLEMENT THIS METHOD
         return null;
     }
