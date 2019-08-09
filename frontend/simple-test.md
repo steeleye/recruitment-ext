@@ -1,8 +1,7 @@
 ### React Component Code Review
 
-- What does the following component do?
-- Are there any problems with it? If so, what are they?
-- Are there any improvements/changes you would make?
+- List down all the problems in the below component
+- Refactor the component to avoid the above problems
 
 ```jsx
 import React from 'react'
