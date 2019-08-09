@@ -1,7 +1,7 @@
 ### React Component Code Review
 
-- List down all the problems in the below component
-- Refactor the component to avoid the above problems
+- List down all the problems in the component below
+- Refactor the component to fix the mentioned problems
 
 ```jsx
 import React from 'react'
