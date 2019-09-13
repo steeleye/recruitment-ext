@@ -4,7 +4,8 @@
 - Refactor the component to fix the mentioned problems
 
 ```jsx
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class SomeListComponent extends React.Component {
   constructor (props) {
@@ -22,14 +23,29 @@ class SomeListComponent extends React.Component {
   renderElement (item, index) {
     return <li onClick={() => this.handleClick(index)}>{item.text}</li>
   }
+  
+  renderElements () => this.state.items.map((item, i) => this.renderElement(item, i));
 
   render () {
     return (
       <ul style={{ backgroundColor: 'red', height: 100 }}>
-        {this.state.items.map((item, i) => this.renderElement(item, i))}
+        // converting the re to a function,
+        // as render function should be compsition of components.
+        {this.renderElements()}
       </ul>
     )
   }
+}
+
+// adding default props & proptypes to avoid runtime exceptions.
+SomeListComponent.defaultProps = { 
+  items: [],
+  onClick: () => {}
+};
+
+SomeListComponent.propTypes = {
+  items: PropTypes.array,
+  onClick: PropTypes.func
 }
 
 export default SomeListComponent
