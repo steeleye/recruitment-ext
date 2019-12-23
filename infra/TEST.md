@@ -1,12 +1,12 @@
 # Technical Test
 
-This task should demonstrate Infrastructure engineering skills, such as:
+This task should demonstrate Infrastructure engineering skills, using all of the below:
 
-- Automation
-- Configuration management
-- Orchestration
-- Scripting
-- Source control
+- AWS services
+- Infra as a Code(IAC) tools such as AWS Cloud Formation,Terraform etc.,
+- End to End Automation
+- Configuration Management (or) Scripting
+- Source Control
 
 If your solution provides a list of manual steps, you are doing it wrong.
 
