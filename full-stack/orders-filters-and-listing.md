@@ -42,7 +42,7 @@ Write an API endpoint that returns a paginated filtered list of Order records ad
 
 ## Database 
 ```
-DATABSE_URL=https://elastic:iHOgynJY6G4HsttZ3CIyjtvz@8f7b2aacdcb14f5ba2464e685e175e69.eu-west-2.aws.cloud.es.io:9243
+DATABSE_URL=<INSERT_HERE>
 INDEX_NAME=.order
 ```
 
