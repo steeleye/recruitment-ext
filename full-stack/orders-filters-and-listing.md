@@ -1,4 +1,4 @@
-# SteelEye full-stak developer - Orders filters and listing problem
+# SteelEye full-stack developer - Orders filters and listing problem
 
 The question below is meant to give candidates a sense of the problems we tackle at SteelEye. Please submit solutions in the form of a readme + working code. The problems should take around three hours to complete (2 hrs for the APIs and 1 for the Frontend).
 
