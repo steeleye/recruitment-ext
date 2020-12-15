@@ -5,7 +5,7 @@ The question below is meant to give candidates a sense of the problems we tackle
 Write an API endpoint that returns a paginated filtered list of Order records adn create a frontend for the same.
 
 ## Requirements:
-* API - Python
+* API - Python (use one of the Python framework: FastAPI, Flask or Django)
 * Database - Elasticsearch
 * Frontend - React.
 
