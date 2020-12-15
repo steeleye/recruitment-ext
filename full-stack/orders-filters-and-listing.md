@@ -7,7 +7,7 @@ Write an API endpoint that returns a paginated filtered list of Order records ad
 ## Requirements:
 * API - Python
 * Database - Elasticsearch
-* Frontend - React / Angular or any framework of your choice.
+* Frontend - React.
 
 ## Order record schema:
 ```
@@ -100,7 +100,7 @@ At a minimum:
 
 ## Frontend
 
-Create a simple web page using Angular / React or any other framework of choice for the the above filters listing. You can use any library for date input and price range input if needed.
+Create a simple web page using React for the the above filters listing. You can use any library for date input and price range input if needed.
 
 ### Filters:
 
