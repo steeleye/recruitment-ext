@@ -101,7 +101,7 @@ BODY:
 ```
 
 ## API:
-Write an API using Python 
+Write an API using Python (use one of the Python framework: FastAPI, Flask or Django)
 
 ```
 GET /listings?type=BUY&search=Amazon&assetClass=Equity&minOrderSubmitted=2011-10-05T14:48:00.000Z&maxOrderSubmitted=2020-12-05T14:48:00.000Z&minPrice=120&maxPrice=2000&minQuantity=10&axQuantity=2000
