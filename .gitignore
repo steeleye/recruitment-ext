@@ -4,3 +4,6 @@
 
 # Build files
 target/
+
+# Temp files
+.DS_Store
