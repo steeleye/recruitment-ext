@@ -2,20 +2,20 @@
 
 # Table of Contents
 
-1.  [Introduction](#org9951cd2)
-    1.  [Constraints](#org936695b)
-    2.  [Database](#org548191e)
-        1.  [Connection](#org91ae02f)
-        2.  [Schema](#org687ab0d)
-2.  [Test](#org567e92c)
-    1.  [Listing orders](#org6f759e4)
-    2.  [Single orders](#orge9cb86f)
-    3.  [Orders search](#orgb3ef9f0)
-    4.  [Advanced search](#orgb08ac6c)
-    5.  [Bonus points](#org0dc2c5f)
+1.  [Introduction](#org4d07f0e)
+    1.  [Constraints](#org8e1bd48)
+    2.  [Database](#orgf12f703)
+        1.  [Connection](#org65255a1)
+        2.  [Schema](#org44bde2d)
+2.  [Test](#org7105ef8)
+    1.  [Listing orders](#org7948595)
+    2.  [Single orders](#org90176e9)
+    3.  [Orders search](#orgc4edae7)
+    4.  [Advanced search](#org6016d2e)
+    5.  [Bonus points](#orgf4ad3e9)
 
 
-<a id="org9951cd2"></a>
+<a id="org4d07f0e"></a>
 
 # Introduction
 
@@ -24,7 +24,7 @@ contents from an ElasticSearch database provided for you. You will
 build a React front-end on top of this API.
 
 
-<a id="org936695b"></a>
+<a id="org8e1bd48"></a>
 
 ## Constraints
 
@@ -42,7 +42,7 @@ Finally you must connect to the ElasticSearch database and
 query it dynamically in your API code.
 
 
-<a id="org548191e"></a>
+<a id="orgf12f703"></a>
 
 ## Database
 
@@ -50,7 +50,7 @@ You have access to a database of orders. An order is a financial
 transaction.
 
 
-<a id="org91ae02f"></a>
+<a id="org65255a1"></a>
 
 ### Connection
 
@@ -59,7 +59,7 @@ The database is available at the url `<INSERT HERE>`.
 The Orders are stored in the index `.order`.
 
 
-<a id="org687ab0d"></a>
+<a id="org44bde2d"></a>
 
 ### Schema
 
@@ -126,12 +126,12 @@ The Elasticsearch schema for an Order is as follows:
     }
 
 
-<a id="org567e92c"></a>
+<a id="org7105ef8"></a>
 
 # Test
 
 
-<a id="org6f759e4"></a>
+<a id="org7948595"></a>
 
 ## Listing orders
 
@@ -139,7 +139,7 @@ As a first exercise, you will be writing an API to list all orders
 in the ElasticSearch database and display them all on a web-page.
 
 
-<a id="orgcb5dd8b"></a>
+<a id="org528f078"></a>
 
 ### API
 
@@ -182,19 +182,19 @@ Example response to `GET /orders`:
     ]
 
 
-<a id="orge85c12d"></a>
+<a id="org9628ee4"></a>
 
 ### Front-end
 
 The front-end will list all orders returned by the endpoint, as
 depicted in the mock-up below.
 
-![img](full-stack/orders-list.jpg)
+![img](orders-list.jpg)
 
 You are free to apply any theme you'd like.
 
 
-<a id="orge9cb86f"></a>
+<a id="org90176e9"></a>
 
 ## Single orders
 
@@ -204,7 +204,7 @@ retrieve data about a specific order, and a front-end view of a single
 order.
 
 
-<a id="org6daead5"></a>
+<a id="org420e39a"></a>
 
 ### API
 
@@ -235,7 +235,7 @@ Schema:
 We're adding `counterpartyName` and `dataSourceName` to the resource.
 
 
-<a id="org10b8dc3"></a>
+<a id="org7446da4"></a>
 
 ### Front-end
 
@@ -248,10 +248,10 @@ order directly through the browser URL so we can share links to orders.
 
 Below is a mockup of the single-order page.
 
-![img](full-stack/order-view.png)
+![img](order-view.png)
 
 
-<a id="orgb3ef9f0"></a>
+<a id="orgc4edae7"></a>
 
 ## Orders search
 
@@ -260,7 +260,7 @@ instead limit the number of fetched orders and offer a search feature
 for the list of orders.
 
 
-<a id="orgf87e0f7"></a>
+<a id="org28ac5a1"></a>
 
 ### API
 
@@ -275,7 +275,7 @@ that will search for matching orders through the following fields:
 -   `counterparty.name`
 
 
-<a id="org46b0b9b"></a>
+<a id="orgf30c2e7"></a>
 
 ### Front-end
 
@@ -287,10 +287,10 @@ A button next to the search field will run the search.
 The user can alternatively press `ENTER` to execute the search when
 the search field is focused.
 
-![img](full-stack/orders-search.jpg)
+![img](orders-search.jpg)
 
 
-<a id="orgb08ac6c"></a>
+<a id="org6016d2e"></a>
 
 ## Advanced search
 
@@ -300,7 +300,7 @@ API endpoint to list orders, and an advanced search form to match in
 the front-end.
 
 
-<a id="org591624d"></a>
+<a id="orgf7d8046"></a>
 
 ### API
 
@@ -366,7 +366,7 @@ return 2 <= tradePrice <= 10).
 The output schema remains unchanged.
 
 
-<a id="org63e9d92"></a>
+<a id="org6f3b549"></a>
 
 ### Front-end
 
@@ -375,10 +375,10 @@ to fill in the new query parameter for the back-end.
 
 See the mock-up below for reference:
 
-![img](full-stack/orders-search-advanced.jpg)
+![img](orders-search-advanced.jpg)
 
 
-<a id="org0dc2c5f"></a>
+<a id="orgf4ad3e9"></a>
 
 ## Bonus points
 

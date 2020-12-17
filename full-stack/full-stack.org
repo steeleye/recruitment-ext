@@ -153,7 +153,7 @@ Example response to =GET /orders=:
 The front-end will list all orders returned by the endpoint, as
 depicted in the mock-up below.
 
-[[file:full-stack/orders-list.jpg]]
+[[file:orders-list.jpg]]
 
 You are free to apply any theme you'd like.
 
@@ -205,7 +205,7 @@ order directly through the browser URL so we can share links to orders.
 
 Below is a mockup of the single-order page.
 
-[[file:full-stack/order-view.png]]
+[[file:order-view.png]]
 
 ** Orders search
 
@@ -235,7 +235,7 @@ A button next to the search field will run the search.
 The user can alternatively press =ENTER= to execute the search when
 the search field is focused.
 
-[[file:full-stack/orders-search.jpg]]
+[[file:orders-search.jpg]]
 
 
 ** Advanced search
@@ -271,7 +271,7 @@ to fill in the new query parameter for the back-end.
 
 See the mock-up below for reference:
 
-[[file:full-stack/orders-search-advanced.jpg]]
+[[file:orders-search-advanced.jpg]]
 
 ** Bonus points
 
