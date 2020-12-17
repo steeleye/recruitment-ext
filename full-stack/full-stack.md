@@ -65,6 +65,7 @@ The Orders are stored in the index `.order`.
 
 The Elasticsearch schema for an Order is as follows:
 
+```json
     {
       "properties": {
         "&id": {
@@ -124,7 +125,7 @@ The Elasticsearch schema for an Order is as follows:
         }
       }
     }
-
+```
 
 <a id="org7105ef8"></a>
 
@@ -153,6 +154,7 @@ Method: `GET`
 
 Schema for a single order:
 
+```json
     {
       "assetClass": { "type": "string" },
       "instrumentId": { "type": "string" },
@@ -168,9 +170,11 @@ Schema for a single order:
       "tradePrice": { "type": "number" },
       "tradeQuantity": { "type": "number" }
     }
+```
 
 Example response to `GET /orders`:
 
+```json
     [
       {
         "assetClass": "Equity",
@@ -180,6 +184,7 @@ Example response to `GET /orders`:
       },
       { ... }
     ]
+```
 
 
 <a id="org9628ee4"></a>
@@ -214,6 +219,7 @@ Method: `GET`
 
 Schema:
 
+```json
     {
       "assetClass": { "type": "string" },
       "instrumentId": { "type": "string" },
@@ -231,6 +237,7 @@ Schema:
       "counterpartyName": { "type": "string" },
       "dataSourceName": { "type": "string" },
     }
+```
 
 We're adding `counterpartyName` and `dataSourceName` to the resource.
 
