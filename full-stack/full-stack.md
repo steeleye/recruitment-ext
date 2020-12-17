@@ -375,7 +375,7 @@ to fill in the new query parameter for the back-end.
 
 See the mock-up below for reference:
 
-![img](orders-search-advanced.jpg)
+![img](orders-advanced-search.jpg)
 
 
 <a id="orgf4ad3e9"></a>
