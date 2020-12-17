@@ -57,6 +57,7 @@ transaction.
 
     The Elasticsearch schema for an Order is as follows:
 
+```json
         {
           "properties": {
             "&id": {
@@ -116,7 +117,7 @@ transaction.
             }
           }
         }
-
+```
 
 <a id="orge92764b"></a>
 
@@ -142,6 +143,7 @@ in the ElasticSearch database and display them all on a web-page.
 
     Schema for a single order:
 
+```json
         {
           "assetClass": { "type": "string" },
           "instrumentId": { "type": "string" },
@@ -169,13 +171,14 @@ in the ElasticSearch database and display them all on a web-page.
           },
           { ... }
         ]
+```
 
 2.  Front-end
 
     The front-end will list all orders returned by the endpoint, as
     depicted in the mock-up below.
 
-    [List all orders](full-stack/orders-list.jpg)
+    ![List all orders](full-stack/orders-list.jpg)
 
     You are free to apply any theme you'd like.
 
@@ -197,6 +200,7 @@ order.
 
     Schema:
 
+```json
         {
           "assetClass": { "type": "string" },
           "instrumentId": { "type": "string" },
@@ -214,6 +218,7 @@ order.
           "counterpartyName": { "type": "string" },
           "dataSourceName": { "type": "string" },
         }
+```
 
     We're adding `counterpartyName` and `dataSourceName` to the resource.
 
@@ -228,7 +233,7 @@ order.
 
     Below is a mockup of the single-order page.
 
-    [One order](full-stack/order-view.png)
+    ![One order](full-stack/order-view.png)
 
 
 <a id="orgcc3b0e8"></a>
@@ -261,7 +266,7 @@ for the list of orders.
     The user can alternatively press `ENTER` to execute the search when
     the search field is focused.
 
-    [Orders search](full-stack/orders-search.jpg)
+    ![Orders search](full-stack/orders-search.jpg)
 
 
 <a id="org9970bfa"></a>
@@ -343,7 +348,7 @@ the front-end.
 
     See the mock-up below for reference:
 
-    [Advanced orders search](full-stack/orders-search-advanced.jpg)
+    ![Advanced orders search](full-stack/orders-search-advanced.jpg)
 
 
 <a id="org6ef8227"></a>
