@@ -180,7 +180,7 @@ Example response to `GET /orders`:
       {
         "assetClass": "Equity",
         "instrumentId": "AAPL",
-        "instrumentId": "Apple Inc.",
+        "instrumentName": "Apple Inc.",
         "orderId": "BUYI:FOOBAR123456",
         "...": "more..."
       },
