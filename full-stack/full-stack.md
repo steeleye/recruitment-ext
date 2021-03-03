@@ -158,6 +158,7 @@ Schema for a single order:
     {
       "assetClass": { "type": "string" },
       "instrumentId": { "type": "string" },
+      "instrumentName": { "type": "string" },
       "orderId": { "type": "string" },
       "orderSubmitted": {
         "type": "string",
@@ -179,6 +180,7 @@ Example response to `GET /orders`:
       {
         "assetClass": "Equity",
         "instrumentId": "AAPL",
+        "instrumentId": "Apple Inc.",
         "orderId": "BUYI:FOOBAR123456",
         "...": "more..."
       },
@@ -223,6 +225,7 @@ Schema:
     {
       "assetClass": { "type": "string" },
       "instrumentId": { "type": "string" },
+      "instrumentName": { "type": "string" },
       "orderId": { "type": "string" },
       "orderSubmitted": {
         "type": "string",
